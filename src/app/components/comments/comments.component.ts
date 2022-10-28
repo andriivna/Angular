@@ -10,10 +10,16 @@ import {IComment} from "../../interfaces";
 })
 export class CommentsComponent implements OnInit {
   comments: IComment[];
+  selectedComment: IComment
+
   constructor(private CommentService: CommentService) { }
 
   ngOnInit(): void {
     this.CommentService.getAll().subscribe(value => this.comments =value)
   }
 
+
+  getComment(comment: IComment) {
+    this.selectedComment = comment
+  }
 }

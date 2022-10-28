@@ -9,6 +9,7 @@ import {PostService} from "../../services";
 })
 export class PostsComponent implements OnInit {
   posts: IPost[]
+  selectedPost: IPost;
 
   constructor(private PostService: PostService) {
 
@@ -17,6 +18,10 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void {
     this.PostService.getAll().subscribe(value => this.posts = value);
+  }
+
+  getPost(post:IPost){
+    this.selectedPost = post
   }
 
 }
