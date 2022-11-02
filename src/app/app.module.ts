@@ -23,8 +23,7 @@ import {RouterModule} from "@angular/router";
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    RouterModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
