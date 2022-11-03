@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {IUser} from "../../interfaces";
-import {UserService} from "../../services";
+import {IUser} from "../../../interfaces";
+import {UserService} from "../../../services";
 
 
 @Component({
