@@ -1,11 +1,14 @@
 import {environment} from "../../environments/environment";
 
-let{API}=environment;
+const{API}=environment;
 
-const urls={
-  users:`${API}/users`,
-  posts:`${API}/posts`,
-  comments:`${API}/comments`
+const auth = `${API}/auth`
+const urls ={
+  cars: `${API}/cars`,
+  auth:{
+    login: auth,
+    refresh:`${auth}/refresh`
+  }
 }
 
 export {
